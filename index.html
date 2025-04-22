@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang = "en">
+    
+    <head>
+        <meta charset = "UTF-8">
+        <title>ZimmerRest</title>
+        <link rel = "stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    </head>
+
+    <body>
+        <header class="header">
+            <img src = "./assets/Logo.png" alt = "ZimmerRest Logo">
+            <nav>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href = "#section2">ABOUT US</a></li>
+                    <li><a href="#section3">HIGHLIGHTS</a></li>
+                    <li><a href="#section5">ROOMS</a></li>
+                    <li><a href = "#section8">CONTACT US</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <div class="carousel">
+                <div class="carousel-track" id="carouselTrack">
+                  <!-- Clone of last slide -->
+                  <div class="slide">
+                    <img src="./assets/carousel_img3.jpg" >
+                </div>
+                  <!-- Real slides -->
+                  <div class="slide">
+                    <img src="./assets/carousel_img1.jpg" >
+                  </div>
+                    <div class="slide">
+                        <img src="./assets/carousel_img2.jpg" >
+                    </div>
+                    <div class="slide">
+                        <img src="./assets/carousel_img3.jpg" >
+                    </div>
+                  <!-- Clone of first slide -->
+                  <div class="slide">
+                    <img src="./assets/carousel_img1.jpg" >
+                  </div>
+                </div>
+                
+              </div>
+
+              <!-- Booking Form Overlay -->
+
+              <div class="overlay" id="bookingOverlay">
+                <div class="form-container">
+                  <h2>Request Booking</h2>
+                  <form id="bookingForm">
+                    <label>Full Name <span class="required">*</span></label>
+                    <input type="text" name="name" required />
+              
+                    <label>Email <span class="required">*</span></label>
+                    <input type="email" name="email" required />
+              
+                    <label>Phone Number <span class="required">*</span></label>
+                    <input type="tel" name="phone" required />
+              
+                    <label>Check-in Date <span class="required">*</span></label>
+                    <input type="date" name="checkin"  id="checkin" required />
+              
+                    <label>Check-out Date <span class="required">*</span></label>
+                    <input type="date" name="checkout"  id="checkout" required />
+              
+                    <label>Number of Guests <span class="required">*</span></label>
+                    <input type="number" name="guests" min="1" required />
+              
+                    <label>Number of Kids</label>
+                    <input type="number" name="kids" min="0" />
+              
+                    <label>Room Type <span class="required">*</span></label>
+                    <select name="roomtype" required>
+                      <option value="">Select Room Type</option>
+                      <option>Deluxe Double Room</option>
+                      <option>Family Room</option>
+                      <option>Budget Single Room</option>
+                    </select>
+              
+                    <label>Number of Rooms <span class="required">*</span></label>
+                    <input type="number" name="rooms" min="1" required />
+              
+                    <label>Special Requests</label>
+                    <textarea name="requests" rows="3" placeholder="Any special needs..."></textarea>
+              
+                    <button class="btn" type="submit">Submit Booking</button>
+                    <button class="btn close-btn" type="button" id="closeFormBtn">Cancel</button>
+                  </form>
+                </div>
+                </div>
+
+            <div class="sections">
+                <section1 class="section1" id="section1">
+                    <button class="nav prev" onclick="moveSlide(-1)">&#10094;</button>
+                    <button class="nav next" onclick="moveSlide(1)">&#10095;</button>
+                    <div class="section1div" >
+                        <img src = "./assets/Logo.png" alt = "ZimmerRest Logo">
+                        <h2>Explore Like a Traveller </br> Stay like a Tourist</h2>
+                        <div>
+                            <button id="openFormBtn">BOOK NOW</button>
+                        </div>
+                    </div>
+                
+                    <div class="features">
+                        <div class="feature feature1">
+                            <img src="./assets/bed.png" alt="Luxurious Stay">
+                            <h3>Luxurious Stay</h3>
+                        </div>
+                        <div class="feature feature2">
+                            <img src="./assets/dinning.png" alt="Dining">
+                            <h3>Dining</h3>
+                        </div>
+                        <div class="feature feature3">
+                            <img src="./assets/spa.png" alt="spa">
+                            <h3>SPA</h3>
+                        </div>
+                        <div class="feature feature4">
+                                <img src="./assets/bookings.png" alt="booking">
+                                <h3>24/7 Bookings</h3>
+                        </div>
+                    </div>
+                </section1>
+                <section2 class="aboutUs" id="section2" style="scroll-margin-top: 10vh;" >
+                    <div class="backText">
+                        <h1>ZIMMER REST</h1>
+                    </div>
+                    <h1>Welcome to</h1>
+                    <h2>Your Coastal Retreat </br> in the Heart of Unawatuna</h2>
+                    <div class="aboutUs-content">
+                        <img src="./assets/carousel_img1.jpg" alt="About Us Image">
+                        <p>Discover Zimmer Rest Unawatuna, a delightful 13-room guesthouse where comfort meets the charm of Sri Lanka’s south coast. Located on Yaddehimulla Road, just a 2-minute walk from the iconic Unawatuna Beach, our family-run haven is rated 9.2/10 for its unbeatable location by 101 real guests. Whether you’re seeking relaxation or adventure, Zimmer Rest offers a home-like escape for families, couples, and solo travelers alike.</p>
+                    </div>
+                </section2>
+                <section3 class="highlights" id="section3" style="scroll-margin-top: 10vh;">
+                    <h1>Highlights</h1>
+                    <h3>Nestled in a vibrant yet peaceful area, Zimmer Rest is your gateway to a perfect holiday. Book now and uncover the serenity of Unawatuna.</h3>
+                    <div class="highlights-icons">
+                        <div class="icon1">
+                            <img src="./assets/comfort.png" alt="Comfort">
+                            <h3>Comfort</h3>
+                        </div>
+                        <div class="icon2">
+                            <img src="./assets/convenience.png" alt="Convenience">
+                            <h3>Convenience</h3>
+                        </div>
+                        <div class="icon3">
+                            <img src="./assets/spa.png" alt="Spa & Wellness">
+                            <h3>SPA & Wellness</h3>
+                        </div>
+                        <div class="icon4">
+                            <img src="./assets/relaxation.png" alt="Relaxation">
+                            <h3>Relaxation</h3>
+                        </div>
+                    </div>
+                </section3>
+                <section4 class="Team" id="section4">
+                    <div class="Team-carousel">
+                        <div class="carousel-container">
+                            <div class="carousel-slides">
+                                <!-- Add your images here -->
+                                <img src="./assets/carousel_img1.jpg" alt="Team member 1">
+                                <img src="./assets/carousel_img2.jpg" alt="Team member 2">
+                                <img src="./assets/carousel_img3.jpg" alt="Team member 3">
+                                <img src="./assets/carousel_img1.jpg" alt="Team member 4">
+                                <img src="./assets/carousel_img2.jpg" alt="Team member 5">
+                                <img src="./assets/carousel_img3.jpg" alt="Team member 6">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Team-msg">
+                        <h1>A Hidden Paradise by the Beach</h1>
+                        <h3>Welcome to Zimmer Rest Unawatuna, a place where comfort meets the serenity of the ocean. Designed to offer you an unforgettable experience, our cozy retreat is crafted to fulfill your desire for a perfect escape. Whether you seek adventure, relaxation, or a home away from home, Zimmer Rest is where your dreams come to life.</h3>
+                        <h3>- The Zimmer Rest Team</h3>
+                    </div>
+                </section4>
+                <section5 id="section5"style="scroll-margin-top: 50vh;">
+                    <h1 >Explore</h1>
+                    <h2>Rooms & Suites</h2>
+                    <div class="roomcontent" >
+                        <div class="roomContentImages" >
+                            <img src="./assets/roomcontent.jpg" alt="room-content" style="border-radius: 0 0px 0px 0px;">
+                            <img src="./assets/carousel_img1.jpg" alt="room-content" style="border-radius: 0 50px 0 0;" >
+                            <img src="./assets/carousel_img2.jpg" alt="room-content" style="border-radius: 0 0 0 50px;">
+                            <img src="./assets/carousel_img3.jpg" alt="room-content" style="border-radius: 0px 0px 0px 0px;">
+                        </div>
+                        <div class="roomtext">
+                            <h3>Comfortable & Stylish Rooms</h3>
+                            <p>Our air-conditioned rooms are designed for your comfort, featuring private balconies with scenic views, modern bathrooms with bidets and free toiletries, and thoughtful touches like work desks and flat-screen TVs. Stay connected with complimentary WiFi throughout your stay. Choose your ideal room:</p>
+                            <button >Book Now</button>
+                        </div>
+                    </div>
+                    <div class="rooms">
+                        <div class="rtype type01 ">
+                            <img src="./assets/room1.jpg" alt="Room 1">
+                            <p>Type 01</p>
+                            <h3>Deluxe Double Room</h3>
+                            <h4>( 1 Large Double Bed )</h4>
+                        </div>
+                        <div class="rtype type02">
+                            <img src="./assets/room2.jpg" alt="Room 2">
+                            <p>Type 02</p>
+                            <h3>Family Room</h3>
+                            <h4>( 2 Large Double Bed )</h4>
+                        </div>
+                        <div class="rtype type03">
+                            <img src="./assets/room3.jpg" alt="Room 3">
+                            <p>Type 03</p>
+                            <h3>Budget Single Room</h3>
+                            <h4>( 1 Single Bed )</h4>
+                        </div>
+                    </div>
+                </section5>
+                <section6 id="section6">
+                    <div class="section6title">
+                        <h1>Unmissable Things to Do and Experience</h1>
+                        <h2>at Unawatuna</h2>
+                       
+                    </div>
+                    <div class="things">
+                        <div class="things-text">
+                            <h1><a href="https://explore.vacations/travel-sri-lanka/explore-what-things-to-do-in-unawatuna/#:~:text=01.%20Exploring%20Unawatuna%E2%80%99s%20Enchanting%20Beaches" target="_blank" style="text-decoration: none; color: inherit; font: inherit; ">01. Exploring Unawatuna’s Enchanting Beaches</a></h1>
+                            <p>explore more -></p>
+                            <h1><a href="https://explore.vacations/travel-sri-lanka/explore-what-things-to-do-in-unawatuna/#:~:text=02.%20Uncovering%20Unawatuna%E2%80%99s%20Cultural%20Heritage" target="_blank" style="text-decoration: none; color: inherit; font: inherit; " >02. Uncovering Unawatuna’s Cultural Heritage</a></h1>
+                            <p>explore more -></p>
+                            <h1><a href="https://explore.vacations/travel-sri-lanka/explore-what-things-to-do-in-unawatuna/#:~:text=03.%20Engaging%20in%20Exciting%20Water%20Sports" target="_blank" style="text-decoration: none; color: inherit; font: inherit; ">03. Engaging in Exciting Water Sports</a></h1>
+                            <p>explore more -></p>
+                            <h1><a href="https://explore.vacations/travel-sri-lanka/explore-what-things-to-do-in-unawatuna/#:~:text=04.%20Embarking%20on%20Nature%20Adventures" target="_blank" style="text-decoration: none; color: inherit; font: inherit; ">04. Embarking on Nature Adventures</a></h1>
+                            <p>explore more -></p>
+                            <h1><a href="https://explore.vacations/travel-sri-lanka/explore-what-things-to-do-in-unawatuna/#:~:text=05.%20Indulging%20in%20Unawatuna%E2%80%99s%20Culinary%20Delights" target="_blank" style="text-decoration: none; color: inherit; font: inherit; ">05. Indulging in Unawatuna’s Culinary Delights</a></h1>
+                            <p>explore more -></p>
+                        </div>
+                        <div class="things-img">
+                            <img src="./assets/things1.webp" alt="Things to Do">
+                            <img src="./assets/things2.jpg" alt="">
+                            <img src="./assets/things3.webp" alt="">
+                        </div>
+                    </div>
+                </section6>
+                <section7 id="section7">
+                    <h1>Testimonials</h1>
+                    <h2>Guest Feedbacks</h2>
+                    <div class="reviews" id="reviews">
+                        <div class="reviewCard" id="review">
+                            <div class="review review1" >
+                                <div class="reviewdot">
+                                    .
+                                </div>
+                                <div class="reviewtit">
+                                    <img src="./assets/comment.png" alt="Review 1">
+                                </div>
+                                <h3>Lovely, calm, welcoming.</h3>
+                                <p>The place is very beautiful, you are in the main street, but very close to the nature. The house keeper was lovely and kind, he helped with everything - gave advises about travellung in Sri Lanka, gave us aloe vera plant after we burned in the sun.</p>
+                                <p>Jurga From Lithuania</p>
+                            </div>
+                            <div class="review review2">
+                                <div class="reviewdot">
+                                    .
+                                </div>
+                                <div class="reviewtit">
+                                    <img src="./assets/comment.png" alt="Review 2">
+                                </div>
+                                <h3>Lovely place, amazing owner.</h3>
+                                <p>Owner was great, he told us many stories about Budizm and Hinduizm. We had breakfast including our reservation. Every morning he prepared us cultural and different breakfast. Hotel's location was also great.</p>
+                                <p>Asya From Turkey</p>
+                            </div>
+                            <div class="review review3">
+                                <div class="reviewdot">
+                                    .
+                                </div>
+                                <div class="reviewtit">
+                                    <img src="./assets/comment.png" alt="Review 2">
+                                </div>
+                                <h3>Exceptional</h3>
+                                <p>The rest house located area was with full of vibe routing to unawatuna beach, peaceful location and friendly property manager ( Mr. THILAK ), he was very nice person, great hospitality.</p>
+                                <p>Dhiva From Sri Lanka</p>
+                            </div>
+                            <div class="review review4">
+                                <div class="reviewdot">
+                                    .
+                                </div>
+                                <div class="reviewtit">
+                                    <img src="./assets/comment.png" alt="Review 2">
+                                </div>
+                                <h3>Superb</h3>
+                                <p>The owner is friendly, knowledgeable and welcoming man. We appreciated talking to him and his help with getting our travels organized. We eventually came back and stayed a few more days. The location is great and the whole property is nice.</p>
+                                <p>Tomáš From Slovakia</p>
+                            </div>
+                            <div class="review review5">
+                                <div class="reviewdot">
+                                    .
+                                </div>
+                                <div class="reviewtit">
+                                    <img src="./assets/comment.png" alt="Review 2">
+                                </div>
+                                <h3>Very happy</h3>
+                                <p>Very kind and generous staff</p>
+                                <p>Mohamed From United Kingdom</p>
+                            </div>
+                            <div class="review review6">
+                                <div class="reviewdot">
+                                    .
+                                </div>
+                                <div class="reviewtit">
+                                    <img src="./assets/comment.png" alt="Review 2">
+                                </div>
+                                <h3>We loved it</h3>
+                                <p>Nice place, clean, good location</p>
+                                <p>István From Hungary</p>
+                            </div>
+                            <div class="review review7">
+                                <div class="reviewdot">
+                                    .
+                                </div>
+                                <div class="reviewtit">
+                                    <img src="./assets/comment.png" alt="Review 2">
+                                </div>
+                                <h3>Exceptional</h3>
+                                <p>The best accommodation! The property is beautiful and feels cozy and homey, it’s a place to relax and enjoy Unawatuna. Owner is incredibly nice and hospitable, made our vacation even better and more memorable by sharing lots of interesting information about Sri Lanka. We even extended our stay and loved it there!</p>
+                                <p>Lucia From Slovakia</p>
+                            </div>
+                            <div class="review review8">
+                                <div class="reviewdot">
+                                    .
+                                </div>
+                                <div class="reviewtit">
+                                    <img src="./assets/comment.png" alt="Review 2">
+                                </div>
+                                <h3>Exceptional</h3>
+                                <p>The most comfortable stay I had in Sri Lanka!
+                                    The place is beautiful, amazing location very close to the beach and all the restaurants/shops.
+                                    Very good mexican restaurant on site!</p>
+                                <p>Agata From Germany</p>
+                            </div>
+                            <div class="review review9">
+                                <div class="reviewdot">
+                                    .
+                                </div>
+                                <div class="reviewtit">
+                                    <img src="./assets/comment.png" alt="Review 2">
+                                </div>
+                                <h3>Thanks for making our holidays just great!</h3>
+                                <p>Super host! Extremely friendly and cheerful! Nice building, torches at the night yard.</p>
+                                <p>Kirill From Russia</p>
+                            </div>
+                            <div class="review review10">
+                                <div class="reviewdot">
+                                    .
+                                </div>
+                                <div class="reviewtit">
+                                    <img src="./assets/comment.png" alt="Review 2">
+                                </div>
+                                <h3>Beautiful, central and quiet</h3>
+                                <p>Beautiful and charming building. Central and quiet. Very close to the beach. Private parking.</p>
+                                <p>Itziar From Spain</p>
+                            </div>
+                            <div class="review review11">
+                                <div class="reviewdot">
+                                    .
+                                </div>
+                                <div class="reviewtit">
+                                    <img src="./assets/comment.png" alt="Review 2">
+                                </div>
+                                <h3>The holiday was great</h3>
+                                <p>Excellent location, quiet from the road, fauna on the hotel grounds, 5 minutes from the beach, all shops nearby</p>
+                                <p>Dina From Russia</p>
+                            </div>
+                            <div class="review review12">
+                                <div class="reviewdot">
+                                    .
+                                </div>
+                                <div class="reviewtit">
+                                    <img src="./assets/comment.png" alt="Review 2">
+                                </div>
+                                <h3>Hotel with cozy and quiet garden.</h3>
+                                <p>The building has a very large garden area, it was nice to sit on the common terrace that was in front of the room. The room and bathroom well equipped and very clean. Good value for money.</p>
+                                <p>Maria From Spain</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nav-buttons">
+                        <button onclick="prevSlide()">
+                            <i class="fas fa-chevron-left"></i> 
+                        </button>
+                        <button onclick="nextSlide()">
+                            <i class="fas fa-chevron-right"></i> 
+                        </button>
+                    </div>
+                    
+                </section7>
+                <section8 id="section8" style="scroll-margin-top: 10vh;">
+                    <h1>Get in Touch</h1>
+                    <h2>Contact Us</h2>
+                    <div class="contact-content">
+                        <div class="contact-map">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3967.8796286084867!2d80.24501437364637!3d6.011261728906709!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae172ee167046bf%3A0xf89e32ef3f204b17!2sZimmer%20Rest!5e0!3m2!1sen!2slk!4v1745299392093!5m2!1sen!2slk" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <div class="contact-text">
+                            <p>If you have any questions or need assistance, feel free to reach out to us. We are here to help you make your stay unforgettable.</p>
+                            <form method="POST" id="form">
+
+                                <input type="hidden" name="access_key" value="ff8a4bc6-8327-43db-a60e-947769a6c604">
+                            
+                                <input type="text" placeholder="Name" name="name" required>
+                                <input type="email" placeholder="Email" name="email" required>
+                                <textarea placeholder="Message" name="message" required></textarea>
+                                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                            
+                                <button type="submit">Submit Form</button>
+                            
+                                <div id="result"></div>
+                            
+                            </form>
+                        </div>
+                    </div>
+                    
+                </section8>
+            </div>
+            <footer>
+                <img src="./assets/Logo.png" alt="ZimmerRest Logo">
+                <div class="footercontent">
+                    <div class="footer-about footercon">
+                        <h3>ABOUT US</h3>
+                        <p>At Zimmer Rest, entertainment is all about choice. Relax in our garden, terrace, or open-air bath, or dive into adventure with yoga classes, bike tours, snorkeling, and hiking. The beach is your playground—Unawatuna Beach (100m), Dalawella Beach (2.1 km), and Jungle Beach (2.4 km) are all within reach.</p>
+                    </div>
+                    <div class="footer-contact footercon">
+                        <div class="address contact"> 
+                            
+                            <img src="./assets/location.png" alt="Location">
+                            <p> <a href="https://maps.app.goo.gl/4awSVUVcLv6ztRmC9" class="link"> Welle Dewala Road, Unawatuna, Sri Lanka </a></p>
+                        </div>
+                        <div class="phone contact">
+                            <img src="./assets/phone.png" alt="Phone">
+                            <p> <a href="tel:+94776918597" class="link"> +94 77 691 8597 </a></p>
+                        </div>
+                        <div class="email contact">
+                            <img src="./assets/email.png" alt="Email">
+                          
+                            <p><a href="mailto:zimmerrest@gmail.com" class="link">zimmerrest@gmail.com</a></p>
+                        </div>
+                    </div>
+                    <div class="footer-social footercon">
+                        <h1>Subscribe Our Newsletter</h1>
+                        <input type="email" placeholder="Enter your email">
+                        <button>Subscribe Now</button>
+                        <h1>Follow Us</h1>
+                        <div class="social-icons">
+                            <a href="https://web.facebook.com/Zimmerrest" target="_blank"><img src="./assets/facebook.png" alt="Facebook"></a>
+                            <a href="https://www.instagram.com/zimmer_rest/" target="_blank" ><img src="./assets/instergram.png" alt="Instagram"></a>
+                        </div>
+                    </div>
+                </div>
+                    <div class="footer-legal ">
+                        <p>© 2025 Zimmer Rest. All rights reserved.</p>
+                        <p>Privacy Policy | Terms & Conditions</p>
+                    </div>
+            </footer>
+        </main>
+        <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+        <script src="script.js"></script>
+    </body>
+        
+        
+</html>
