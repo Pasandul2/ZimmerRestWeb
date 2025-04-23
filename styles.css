@@ -1093,7 +1093,7 @@ footer {
 
 footer img{
     width: 150px;
-    height: 100px;
+    height: auto;
     filter: grayscale(100%) brightness(200%);
 }
 
@@ -1137,6 +1137,9 @@ footer img{
     gap: 10px;
 }
 
+.contactusText{
+    display: none;
+}
 
 .contact img{
     width: 20px;
@@ -1207,3 +1210,228 @@ footer img{
     margin: 0;
 }
 
+
+
+@media screen and (max-width: 768px) {
+    
+    section1 {
+        padding-top: 25vh ;
+        height: 120vh;
+
+    }
+
+    section1 .features{
+        width: 90%;
+        height: auto;
+    }
+
+    section1 .feature4{
+        width: 100%;
+        height: auto;
+        border-radius: 20px;
+        border-right: 0px;
+        margin: 0px 4px;
+    }
+
+    section2 {
+        height: auto;
+    }
+
+    section2 .aboutUs-content {
+        flex-direction: column;
+        width: 100%;
+        padding: 0px 20px;
+        gap: 20px;
+    }
+    section2 .aboutUs-content img {
+        width: 70%;
+        height: auto;
+    }
+    section2 .aboutUs-content p {
+        font-size: 1em;
+        width: 80%;
+        padding: 0px;
+    }
+
+    section4{
+        display: block;
+    }
+    .Team-msg {
+        width: 90%;
+        padding: 10px;
+    }
+    .Team-msg h1 {
+        font-size: 1.2rem;
+    }
+    .Team-msg h3 {
+        font-size: 0.8rem;
+    }
+    .Team-carousel {
+        width: 100%;
+        height: auto;
+    }
+    .carousel-slides img {
+        width: 70%;
+        height: auto;
+    }
+
+    .roomcontent{
+        width: 95%;
+        gap: 20px;
+    }
+    
+    .roomtext p{
+        font-size: 0.9em;
+    }
+
+    .rooms{
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .rtype{
+        width: 80%;
+        height: auto;
+    }
+    .rtype img{
+        width: 100%;
+        height: auto;
+    }
+
+    section6{
+        padding: 60px 0px 0px ;
+        overflow: hidden;
+    }
+    .section6title{
+        padding-right: 0%;
+    }
+    .section6title h1{
+        font-size: 1.5em;
+    }
+    .section6title h2{
+        font-size: 2.5em;
+    }
+    .things{
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    .things-text {
+        order: 2;
+        width: 70%;
+        padding: 0px;
+        text-align: justify;
+    }
+    .things-img {
+        width: 100% !important;
+        height: auto;
+        display: flex; /* Ensures images align horizontally */
+        justify-content: center; /* Space between images */
+        gap: 20px;
+        
+    }
+    .things-img img {
+        width: 30% ;
+        height: 35vh;
+        object-fit: cover;
+        transition: all 0.5s ease-in-out; 
+        border-radius: 10px;
+        margin-top: 80px;
+    }
+
+    section7 {
+        padding: 40px 0px 40px ;
+    }
+    .reviews {
+        width: 100%;
+        overflow: hidden;
+        margin: 30px 0;
+    }
+    .reviewCard {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        width: auto;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    section8{
+        padding: 20px 0px 0px ;
+        height: auto;
+    }
+    .contact-content{
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 20px;
+    }
+    .contact-map{
+        width: 80%;
+        height: 50vh;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+    .contact-text {
+        width: 80%;
+        padding: 20px;
+        text-align: justify;
+    }
+    .contact-text p{
+        font-size: 1.1em;
+        font-family: "Open Sans", sans-serif;
+        text-align: justify;
+        color: #000000;
+    }
+
+    footer {
+        padding: 20px 0 0;
+    }
+
+    footer img{
+        width: 300px;
+        height: auto;
+        filter: grayscale(100%) brightness(200%);
+    }
+
+    .footercontent{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 20px;
+    }
+    .footercon{
+        text-align: center;
+        width: 100%;
+        border-right: 0px;
+        border-bottom: 2px solid #ffffff;
+        padding: 10px 0 40px;
+    }
+
+    .footer-social{
+        border-bottom: none;
+    }
+    .footer-social{
+        text-align: center;
+        width: 100%;
+        border-right: 0px;
+    }
+    .footer-about p{
+        font-size: 0.9em;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 400;
+        margin: 0px;
+    }
+    
+    .footer-contact{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contactusText{
+        display: flex;
+    }
+    
+ 
+}
