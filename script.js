@@ -259,7 +259,7 @@ showSlide(currentSlide);
 
     emailjs.init("h30Wcleua9RYOXuPu");
 
-    const openFormBtn = document.getElementById('openFormBtn'  );
+    const openFormBtns = document.querySelectorAll('.openFormBtn');
     const closeFormBtn = document.getElementById('closeFormBtn');
     const overlay = document.getElementById('bookingOverlay');
     const form = document.getElementById('bookingForm');
@@ -273,7 +273,7 @@ showSlide(currentSlide);
         checkOut.min = this.value;
     });
 
-    openFormBtn.onclick = () => overlay.style.display = 'flex';
+    openFormBtns.onclick = () => overlay.style.display = 'flex';
     closeFormBtn.onclick = () => overlay.style.display = 'none';
 
     // Optional: close form if clicked outside
@@ -284,9 +284,11 @@ showSlide(currentSlide);
         }
     };
 
-    openFormBtn.addEventListener("click", () => {
-        overlay.style.display = "flex";
-        document.body.style.overflow = "hidden"; // Disable scroll
+    openFormBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            overlay.style.display = 'flex';
+            document.body.style.overflow = 'hidden'; // Disable scroll
+        });
     });
     
     closeFormBtn.addEventListener("click", () => {
@@ -329,6 +331,7 @@ showSlide(currentSlide);
                 window.open(`https://wa.me/94713677499?text=${encodeURIComponent(msg)}`, '_blank');
     
                 overlay.style.display = 'none';
+                document.body.style.overflow = "";
                 form.reset();
             }, function(error2) {
                 alert("Customer confirmation email failed.");
@@ -380,6 +383,19 @@ Cform.addEventListener('submit', function(e) {
             Cform.reset();
             setTimeout(() => {
                 result.style.display = "none";
+                document.body.style.overflow = "";
             }, 3000);
         });
 });
+
+// Prevent typing in the date input fields and show date picker on focus
+
+const checkin = document.getElementById('checkin');
+const checkout = document.getElementById('checkout');
+
+checkin.addEventListener('keydown', e => e.preventDefault()); // Prevent typing in the input field
+checkin.addEventListener('focus', () => checkin.showPicker?.()); // Show date picker on focus
+checkout.addEventListener('keydown', e => e.preventDefault()); // Prevent typing in the input field
+checkout.addEventListener('focus', () => checkout.showPicker?.()); // Show date picker on focus
+
+

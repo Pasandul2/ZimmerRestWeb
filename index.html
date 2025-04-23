@@ -3,7 +3,20 @@
     
     <head>
         <meta charset = "UTF-8">
-        <title>ZimmerRest</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Zimmer Rest Unawatuna | Your Coastal Retreat in Sri Lanka</title>
+        <!-- Meta Description for SEO -->
+        <meta name="description" content="Zimmer Rest Unawatuna is a cozy 13-room guesthouse just 2 minutes from Unawatuna Beach. Book your perfect Sri Lankan escape with comfort, relaxation, and adventure.">
+    
+        <!-- Keywords for SEO -->
+        <meta name="keywords" content="Zimmer Rest, Unawatuna hotel, Sri Lanka guesthouse, beachfront accommodation, Unawatuna beach, budget hotel Sri Lanka, coastal retreat, family guesthouse, Unawatuna lodging">
+
+        <!-- Author -->
+        <meta name="author" content="Zimmer Rest Unawatuna">
+
+         <!-- Favicon -->
+        <link rel="icon" href="./assets/favicon.png" type="image/x-icon">
+
         <link rel = "stylesheet" href="styles.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
@@ -21,6 +34,13 @@
                     <li><a href = "#section8">CONTACT US</a></li>
                 </ul>
             </nav>
+            <div style="display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;">
+                <button class="openFormBtn">BOOK NOW</button>
+            </div>
+            
         </header>
 
         <main>
@@ -52,45 +72,62 @@
 
               <div class="overlay" id="bookingOverlay">
                 <div class="form-container">
+                <div class="form-header" style="display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;">
+                  <img src = "./assets/Logo.png" alt = "ZimmerRest Logo" style="width: auto; height: 70px;">
                   <h2>Request Booking</h2>
+                  <button class="btn close-btn" type="button" id="closeFormBtn">Cancel</button>
+                </div>
                   <form id="bookingForm">
-                    <label>Full Name <span class="required">*</span></label>
-                    <input type="text" name="name" required />
-              
-                    <label>Email <span class="required">*</span></label>
-                    <input type="email" name="email" required />
-              
-                    <label>Phone Number <span class="required">*</span></label>
-                    <input type="tel" name="phone" required />
-              
-                    <label>Check-in Date <span class="required">*</span></label>
-                    <input type="date" name="checkin"  id="checkin" required />
-              
+                    <input type="text" placeholder="Full Name" name="name" required />
+                    <div style="display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;">
+                    <div style="width: 48%;"><input type="email" placeholder="Email" name="email" required /></div>
+                    <div style="width: 48%;"><input type="tel" placeholder="Phone Number" name="phone" required /></div>
+                </div>
+                <div style="display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;">
+                    <div style="width: 48%;">
+                    <label >Check-in Date <span class="required">*</span></label>
+                    <input style="margin-top: 0px;" type="date" name="checkin"  id="checkin" required  />
+                    </div>
+                    <div style="width: 48%;">
                     <label>Check-out Date <span class="required">*</span></label>
-                    <input type="date" name="checkout"  id="checkout" required />
-              
-                    <label>Number of Guests <span class="required">*</span></label>
-                    <input type="number" name="guests" min="1" required />
-              
-                    <label>Number of Kids</label>
-                    <input type="number" name="kids" min="0" />
-              
-                    <label>Room Type <span class="required">*</span></label>
-                    <select name="roomtype" required>
-                      <option value="">Select Room Type</option>
-                      <option>Deluxe Double Room</option>
-                      <option>Family Room</option>
-                      <option>Budget Single Room</option>
-                    </select>
-              
-                    <label>Number of Rooms <span class="required">*</span></label>
-                    <input type="number" name="rooms" min="1" required />
-              
-                    <label>Special Requests</label>
+                    <input style="margin-top: 0px;" type="date" name="checkout"  id="checkout" required />
+                    </div>
+                </div>
+                <div style="display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;">
+                    <div style="width: 48%;"><input type="number" placeholder="Number of Guests" name="guests" min="1" required /></div>
+                    <div style="width: 48%;"><input type="number" placeholder="Number of Kids" name="kids" min="0" /></div>
+                </div>
+                    
+                <div style="display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;">
+                    <div style="width: 48%;">
+                        <select name="roomtype" required style="width: 100%;"> 
+                            <option value=""  selected hidden>Select Room Type</option>
+                            <option>Deluxe Double Room</option>
+                            <option>Family Room</option>
+                            <option>Budget Single Room</option>
+                          </select>
+                    </div>
+                    <div style="width: 48%;">
+                        <input type="number" placeholder="Number of Rooms" name="rooms" min="1" required />
+                    </div>
+
+                </div>
                     <textarea name="requests" rows="3" placeholder="Any special needs..."></textarea>
-              
+                <div style="display: flex;
+                    justify-content: center;">
                     <button class="btn" type="submit">Submit Booking</button>
-                    <button class="btn close-btn" type="button" id="closeFormBtn">Cancel</button>
+                </div>
                   </form>
                 </div>
                 </div>
@@ -103,7 +140,7 @@
                         <img src = "./assets/Logo.png" alt = "ZimmerRest Logo">
                         <h2>Explore Like a Traveller </br> Stay like a Tourist</h2>
                         <div>
-                            <button id="openFormBtn">BOOK NOW</button>
+                            <button class="openFormBtn">BOOK NOW</button>
                         </div>
                     </div>
                 
@@ -192,7 +229,7 @@
                         <div class="roomtext">
                             <h3>Comfortable & Stylish Rooms</h3>
                             <p>Our air-conditioned rooms are designed for your comfort, featuring private balconies with scenic views, modern bathrooms with bidets and free toiletries, and thoughtful touches like work desks and flat-screen TVs. Stay connected with complimentary WiFi throughout your stay. Choose your ideal room:</p>
-                            <button >Book Now</button>
+                            <button class="openFormBtn">BOOK NOW</button>
                         </div>
                     </div>
                     <div class="rooms">
@@ -444,11 +481,11 @@
                             <p><a href="mailto:zimmerrest@gmail.com" class="link">zimmerrest@gmail.com</a></p>
                         </div>
                     </div>
-                    <div class="footer-social footercon">
-                        <h1>Subscribe Our Newsletter</h1>
-                        <input type="email" placeholder="Enter your email">
-                        <button>Subscribe Now</button>
-                        <h1>Follow Us</h1>
+                    <div class="footer-social footercon" style="display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;">
+                        <h1>Follow Us On</h1>
                         <div class="social-icons">
                             <a href="https://web.facebook.com/Zimmerrest" target="_blank"><img src="./assets/facebook.png" alt="Facebook"></a>
                             <a href="https://www.instagram.com/zimmer_rest/" target="_blank" ><img src="./assets/instergram.png" alt="Instagram"></a>
