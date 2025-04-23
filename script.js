@@ -281,6 +281,7 @@ showSlide(currentSlide);
         if (e.target === overlay) {
         overlay.style.display = 'none';
         document.body.style.overflow = "";
+        form.reset();
         }
     };
 
@@ -294,6 +295,7 @@ showSlide(currentSlide);
     closeFormBtn.addEventListener("click", () => {
         overlay.style.display = "none";
         document.body.style.overflow = ""; // Restore scroll
+        form.reset();
     });
 
     form.addEventListener('submit', function (e) {
@@ -384,6 +386,7 @@ Cform.addEventListener('submit', function(e) {
             setTimeout(() => {
                 result.style.display = "none";
                 document.body.style.overflow = "";
+                form.reset();
             }, 3000);
         });
 });
@@ -399,3 +402,31 @@ checkout.addEventListener('keydown', e => e.preventDefault()); // Prevent typing
 checkout.addEventListener('focus', () => checkout.showPicker?.()); // Show date picker on focus
 
 
+// Toggle menu for mobile view
+const toggleBtn = document.getElementById('menu-toggle');
+const closeBtn = document.getElementById('close-btn');
+const nav = document.getElementById('main-nav');
+const Moverlay = document.getElementById('menu-overlay');
+const body = document.body;
+
+function openMenu() {
+    nav.classList.add('open');
+    Moverlay.classList.add('show');
+    body.classList.add('no-scroll');
+}
+
+function closeMenu() {
+    nav.classList.remove('open');
+    Moverlay.classList.remove('show');
+    body.classList.remove('no-scroll');
+}
+
+toggleBtn.addEventListener('click', openMenu);
+closeBtn.addEventListener('click', closeMenu);
+Moverlay.addEventListener('click', closeMenu);
+
+document.querySelectorAll('.main-nav a').forEach(link => {
+    link.addEventListener('click', () => {
+        closeMenu();
+    });
+});

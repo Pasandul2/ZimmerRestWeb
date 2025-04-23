@@ -21,6 +21,103 @@ body {
 }
 
 
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #000;
+}
+
+.menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+}
+
+.main-nav {
+    transition: right 0.7s ease-in-out;
+}
+
+.main-nav .close-btn {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #000;
+}
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+.book-now-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 1002;
+    
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .main-nav .close-btn {
+        display: block;
+    }
+
+    .main-nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 250px;
+        height: 100%;
+        background-color: #ffffff;
+        z-index: 1001;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-left: 5px solid #E0B279;
+    }
+
+    .main-nav.open {
+        right: 0;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .main-nav ul li :hover {
+        border-bottom:  2px solid #bd8744;
+    }
+
+   
+
+    .menu-overlay.show {
+        display: block;
+    }
+}
+
+
+
 header {
     background-color: #ffffff;
     color: #000000;
@@ -78,7 +175,7 @@ header button{
     padding: 8px 20px;
     border-radius: 20px;
     margin: 8px 0;
-    border: 2px solid #e0b27900;
+    border: 2px solid #fdfdfde7;
     cursor: pointer;
 }
 
@@ -846,12 +943,34 @@ section7 {
     font-weight: 200;
     font-size: 1.5em;
     margin: 0;
+    overflow: hidden;
   }
   
   .reviews {
     width: 100%;    
     overflow: hidden;
     margin: 30px 0;
+    height: 60vh;
+  }
+
+  @media screen and (max-width: 1024px) {
+    .reviews {
+        height: 75vh;
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    .reviews {
+        height: 60vh;
+    }
+    
+  }
+
+  @media screen and (max-width: 768px) {
+    .reviews {
+        height: 50vh;
+    }
+    
   }
   
   .reviewCard {
@@ -1213,6 +1332,10 @@ footer img{
 
 
 @media screen and (max-width: 768px) {
+    header img{
+        width: 20vh;
+        height: auto;
+    }
     
     section1 {
         padding-top: 25vh ;
