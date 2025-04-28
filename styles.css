@@ -128,7 +128,7 @@ header {
     padding: 0px 10px;
     height: 15vh;
     text-align: center;
-    display: flex;
+    display: flex !important;
     justify-content: space-around;
     position: fixed;
     opacity: 0; 
@@ -191,7 +191,7 @@ main {
 }
 
   .carousel {
-    position: fixed;
+    position: fixed !important;
     width: 100%;
     height: 100vh;
     overflow: hidden;
@@ -269,14 +269,16 @@ main {
     .form-container h2 {
       text-align: center;
       margin-top: 0;
+        font-family: 'Courier New', Courier, monospace;
     }
 
     .form-container input,
     .form-container select,
     .form-container textarea {
       width: 90%;
-      padding: 10px 4.8%;
+      padding: 5px 4.8%;
       margin: 10px 0;
+      margin-bottom: 3px;
       border-radius: 6px;
       border: 1px solid #ccc;
       font-size: 14px;
@@ -291,7 +293,7 @@ main {
     }
 
     .form-container .btn {
-        background-color: #f0ba79;
+        background-color: #e29f4d;
         color: white;
         padding: 10px 20px;
         border-radius: 20px;
@@ -363,7 +365,8 @@ section1{
 .section1div{
     display: flex;
     flex-direction: column;
-    justify-content:  left;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -555,8 +558,8 @@ section3 h3{
 }
 
 .highlights-icons{
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     justify-content: space-around;
     gap: 40px;
     align-items: center;
@@ -928,6 +931,8 @@ section7 {
     text-align: center;
     padding: 60px 10% 30px 10%;
     background-color: #ffffff;
+    overflow: hidden;
+    height: auto;
   }
   
   section7 h1 {
@@ -945,33 +950,51 @@ section7 {
     margin: 0;
     overflow: hidden;
   }
-  
-  .reviews {
-    width: 100%;    
-    overflow: hidden;
-    margin: 30px 0;
-    height: 60vh;
+
+  .swiper {
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 50px;
   }
 
+
+
   @media screen and (max-width: 1024px) {
-    .reviews {
+    .swiper-slide {
         height: 75vh;
     }
   }
 
   @media screen and (max-width: 900px) {
-    .reviews {
+    .swiper-slide {
         height: 60vh;
     }
     
   }
 
   @media screen and (max-width: 768px) {
-    .reviews {
+    .swiper-slide {
         height: 50vh;
     }
     
   }
+
+  .swiperButton {
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    gap: 100px;
+    margin-top: 25px;
+  }
+
+  .swiper-button-next, .swiper-button-prev {
+        color: #E0B279 !important;
+}
+
+  .swiper-button-next, .swiper-button-prev {
+    position: relative !important;
+}
+
   
   .reviewCard {
     display: flex;
@@ -1068,18 +1091,18 @@ section7 {
   }
   
   /* Responsive slides */
-  @media (min-width: 600px) {
+  /* @media (min-width: 600px) {
     .review {
-      flex: 0 0 50%;
+      flex: 0 0 40%;
     }
   }
   
   @media (min-width: 900px) {
     .review {
-      flex: 0 0 33.33%;
+      flex: 0 0 43.33%;
     }
   }
-  
+   */
   .nav-buttons {
     margin-top: 0px;
   }
@@ -1336,7 +1359,7 @@ footer img{
         width: 20vh;
         height: auto;
     }
-    
+
     section1 {
         padding-top: 25vh ;
         height: 120vh;
@@ -1349,11 +1372,12 @@ footer img{
     }
 
     section1 .feature4{
-        width: 100%;
+        width: auto;
         height: auto;
         border-radius: 20px;
         border-right: 0px;
         margin: 0px 4px;
+        justify-content: center;
     }
 
     section2 {
@@ -1557,4 +1581,142 @@ footer img{
     }
     
  
+}
+
+@media screen and (max-width: 480px) {
+
+ 
+
+    section{
+        padding: 0px 0px 0px ;
+        height: auto;
+        width: 100%;
+        margin: 0px 0px;
+        overflow: hidden;
+
+    }
+    
+    section1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-items: center; 
+        text-align: center;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .section1div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .section1div img{
+        width: 70%;
+        padding-top: 20vh;
+        margin-bottom: 5vh;
+    }
+    
+
+    section1 .features{
+        width: 92%;
+        height: auto;
+    }
+
+    section1 .feature{
+        height: 100%;
+        flex-direction: column;
+    }
+
+    section1 .feature4{
+        width: 50%;
+    padding: 0px 0px;
+    }
+
+    .feature h3 {
+        font-size: 0.8em;
+    }
+
+    section3{
+        overflow: hidden;
+    }
+
+    .Team{
+        padding-bottom: 80px;
+    }
+
+    .highlights-icons{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .carousel-slides img {
+        width: 100%;
+        height: auto;
+        gap:5px;
+    }
+
+    .Team-msg {
+        width: 80%;
+        padding: 10px;
+    }
+
+    .roomcontent{
+        flex-direction: column;
+        width: 80%;
+    }
+
+    .roomContentImages{
+        width: 100%;
+        grid-gap: 10px;
+    }
+    
+    .roomContentImages img{
+        margin: 0px 0px;
+    }
+
+    .roomtext{
+        width: 100%;
+        padding: 0px;
+        text-align: justify;
+    }
+
+    .things-text {
+        width: 100%;
+        padding: 0px;
+        text-align: justify;
+    }
+
+    .form-header h2{
+        font-size: 1em;
+        font-family: "besley", serif;
+        font-weight: 400;
+        margin: 0;
+        
+    }
+    .form-header button{
+        font-size: 0.8em;
+        padding: 5px 5px;
+    }
+
+    .form-container input{
+        margin-bottom: 0px !important;
+        padding: 5px 5px;
+    }
+
+    .form-container label {
+        font-size: 0.8em;
+        font-family: "besley", serif;
+        font-weight: 400;
+        margin: 0;
+    }
+
+    input::placeholder {
+        color: gray;
+        font-size: 12px;
+        opacity: 0.7; 
+      }
 }

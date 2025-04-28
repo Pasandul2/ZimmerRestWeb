@@ -1,11 +1,11 @@
-window.addEventListener('load', () => {
-    setTimeout(() => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    }, 50); // slight delay to allow layout to settle
-});
+// window.addEventListener('load', () => {
+//     setTimeout(() => {
+//         window.scrollTo({
+//             top: 0,
+//             behavior: 'smooth'
+//         });
+//     }, 50); // slight delay to allow layout to settle
+// });
 
 
 // Carousel section
@@ -177,7 +177,7 @@ showSlide(currentSlide);
         const carouselNavprev = document.querySelector('.prev');
         const carouselNavnext = document.querySelector('.next');
         const backText = document.querySelector('.backText');
-        
+        const isMobile = window.innerWidth <= 480;
  
         window.addEventListener('scroll', () => {
             if (scrollY > 70) {
@@ -204,8 +204,8 @@ showSlide(currentSlide);
         });
 
         window.addEventListener('scroll', () => {
-            if (scrollY > 40) { // Scrolling down
-                section1Img.style.transform = "scale(0.7)";  // Scale down the image
+            if (scrollY > 50) { // Scrolling down
+                section1Img.style.transform = isMobile ? "scale(1)" : "scale(0.7)";
                 
             } else { // Scrolling up
                 section1Img.style.transform = "scale(1)";  // Restore original scale
@@ -222,24 +222,24 @@ showSlide(currentSlide);
             }
         });
 
-        window.addEventListener('scroll', () => {
-            section7.forEach(section => {
-                if (scrollY > 3600) {
-                    section.style.opacity = "1";
-                    section.style.marginTop = "0";
+        // window.addEventListener('scroll', () => {
+        //     section7.forEach(section => {
+        //         if (scrollY > 3200) {
+        //             section.style.opacity = "1";
+        //             section.style.marginTop = "0";
 
-                    section7review1.style.transition = "margin-top 1s ease-in-out , opacity 1s ease"; // Add transition for smooth effect
-                    section7review2.style.transition = "margin-top 2s ease-in-out , opacity 4s ease"; // Add transition for smooth effect
-                    section7review3.style.transition = "margin-top 2.7s ease-in-out , opacity 6s ease"; // Add transition for smooth effect
-                    section7review4.style.transition = "margin-top 2.7s ease-in-out , opacity 8s ease"; // Add transition for smooth effect
-                } else {
-                    section.style.opacity = "0";
-                    section.style.marginTop = "100px"; // Adjust margin-top to 100px when hidden
-                    section.style.transition = "margin-top 0s ease , opacity 0s ease"; // Remove transition when hidden
-                }
-            });
+        //             section7review1.style.transition = "margin-top 1s ease-in-out , opacity 1s ease"; // Add transition for smooth effect
+        //             section7review2.style.transition = "margin-top 2s ease-in-out , opacity 4s ease"; // Add transition for smooth effect
+        //             section7review3.style.transition = "margin-top 2.7s ease-in-out , opacity 6s ease"; // Add transition for smooth effect
+        //             section7review4.style.transition = "margin-top 2.7s ease-in-out , opacity 8s ease"; // Add transition for smooth effect
+        //         } else {
+        //             section.style.opacity = "0";
+        //             section.style.marginTop = "100px"; // Adjust margin-top to 100px when hidden
+        //             section.style.transition = "margin-top 0s ease , opacity 0s ease"; // Remove transition when hidden
+        //         }
+        //     });
             
-        });
+        // });
 
         const thingsText = document.querySelector('.things-text');
         const thingsImg = document.querySelector('.things-img');

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Footer Carousel Example</title>
+
+  <!-- Swiper CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f1f1f1;
+      margin: 0;
+      padding: 0;
+    }
+
+    .footer-section {
+      padding: 50px 20px;
+      background-color: #fff;
+    }
+
+    .swiper {
+      width: 100%;
+      padding-top: 20px;
+      padding-bottom: 50px;
+    }
+
+    .swiper-slide {
+      background: #f8f9fa;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      height: 200px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .content-box {
+      padding: 20px;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: #000;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Footer Carousel Section -->
+  <div class="footer-section">
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="content-box">
+            <h5>Title 1</h5>
+            <p>Description 1</p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="content-box">
+            <h5>Title 2</h5>
+            <p>Description 2</p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="content-box">
+            <h5>Title 3</h5>
+            <p>Description 3</p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="content-box">
+            <h5>Title 4</h5>
+            <p>Description 4</p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="content-box">
+            <h5>Title 5</h5>
+            <p>Description 5</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation buttons -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Swiper initialization -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      centeredSlides: true,
+      loop: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+
+</body>
+</html>
