@@ -1396,7 +1396,7 @@ footer img{
     }
     section2 .aboutUs-content p {
         font-size: 1em;
-        width: 80%;
+        width: 100%;
         padding: 0px;
     }
 
@@ -1578,6 +1578,10 @@ footer img{
 
     .contactusText{
         display: flex;
+    }
+
+    .contact-text form input, .contact-text form textarea {
+        width: 120%;
     }
     
  
