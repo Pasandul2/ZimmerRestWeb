@@ -257,7 +257,7 @@ showSlide(currentSlide);
         });
         
 
-    emailjs.init("h30Wcleua9RYOXuPu");
+    emailjs.init("wtd5FI2znClPhD0mr");
 
     const openFormBtns = document.querySelectorAll('.openFormBtn');
     const closeFormBtn = document.getElementById('closeFormBtn');
@@ -315,10 +315,10 @@ showSlide(currentSlide);
         };
     
         // Send email to owner
-        emailjs.send("service_hv9fkx8", "template_tjyzb4j", bookingDetails)
+        emailjs.send("service_iw0muj2", "template_pni6ve3", bookingDetails)
         .then(function(response) {
             // Send confirmation email to customer
-            emailjs.send("service_hv9fkx8", "template_si3h80k", bookingDetails).then(function(response2) {
+            emailjs.send("service_iw0muj2", "template_45pxrut", bookingDetails).then(function(response2) {
                 alert("Booking submitted successfully!");
     
                 // WhatsApp message
