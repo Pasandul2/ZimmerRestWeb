@@ -437,8 +437,7 @@ section1 .feature4{
 }
 
 .feature4 img{
-    width: 18px !important;
-    height: 18px !important;
+    width: 30px !important;
     border-radius: 0% !important;
 }
 
@@ -450,7 +449,7 @@ section1 .feature4{
 }
 
 .feature img{
-    width: 20px;
+    width: 40px;
     height: auto;
     background-color: aliceblue;
     border-radius: 20%;

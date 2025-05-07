@@ -213,7 +213,7 @@ showSlide(currentSlide);
         });
 
         window.addEventListener('scroll', () => {
-            if (scrollY > 650) { // Scrolling down
+            if (scrollY > 550) { // Scrolling down
                 section2.style.opacity = "1";    // Slide in the text
                 backText.style.left = "-2vw"; // Slide in the text
             } else { // Scrolling up
@@ -318,18 +318,11 @@ showSlide(currentSlide);
         emailjs.send("service_hv9fkx8", "template_tjyzb4j", bookingDetails)
         .then(function(response) {
             // Send confirmation email to customer
-            emailjs.send("service_hv9fkx8", "template_tjyzb4j", {
-                to_email: bookingDetails.email,
-                to_name: bookingDetails.name,
-                checkin: bookingDetails.checkin,
-                checkout: bookingDetails.checkout,
-                guests: bookingDetails.guests,
-                rooms: bookingDetails.rooms
-            }).then(function(response2) {
+            emailjs.send("service_hv9fkx8", "template_si3h80k", bookingDetails).then(function(response2) {
                 alert("Booking submitted successfully!");
     
                 // WhatsApp message
-                const msg = `New Booking:\nName: ${bookingDetails.name}\nCheck-in: ${bookingDetails.checkin}\nCheck-out: ${bookingDetails.checkout}\nGuests: ${bookingDetails.guests}\nRooms: ${bookingDetails.rooms}`;
+                const msg = `New Booking:-\nName: ${bookingDetails.name}\nEmail: ${bookingDetails.email}\nPhone: ${bookingDetails.phone}\nCheck-in: ${bookingDetails.checkin}\nCheck-out: ${bookingDetails.checkout}\nGuests: ${bookingDetails.guests}\nKids: ${bookingDetails.kids}\nRoom Type: ${bookingDetails.roomtype}\nRooms: ${bookingDetails.rooms}\nRequests: ${bookingDetails.requests}`;
                 window.open(`https://wa.me/94713677499?text=${encodeURIComponent(msg)}`, '_blank');
     
                 overlay.style.display = 'none';
