@@ -416,6 +416,7 @@ section1 .features{
     margin: 20px 20px;
     padding: 20px 0px;
     background-color: #e0B279;
+    overflow: hidden;
 }
 
 section1 .feature{
@@ -777,6 +778,7 @@ section5 h2{
     background-color: white;
     width: 24%;
     justify-items: center;
+    align-items: center;
     border-radius: 20px;
 }
 
@@ -1283,10 +1285,9 @@ footer img{
 }
 
 .contact img{
-    width: 20px;
+    width: 30px;
     height: auto;
     padding: 5px;
-    padding-top: 10px;
 }
 
 
@@ -1443,6 +1444,7 @@ footer img{
     .rtype{
         width: 80%;
         height: auto;
+        align-items: center;
     }
     .rtype img{
         width: 100%;
@@ -1588,6 +1590,11 @@ footer img{
         width: 120%;
     }
     
+
+    .book-now-wrapper {
+        right: 15px;
+    }
+
  
 }
 
