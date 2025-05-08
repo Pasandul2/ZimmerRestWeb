@@ -1657,7 +1657,8 @@ footer img{
 
     section1 .feature4{
         width: 50%;
-    padding: 0px 0px;
+        gap: 0;
+        padding: 5px 0px;
     }
 
     .feature h3 {
