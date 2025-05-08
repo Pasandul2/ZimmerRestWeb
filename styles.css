@@ -1360,6 +1360,9 @@ footer img{
 
 
 @media screen and (max-width: 768px) {
+    header {
+        justify-content: space-between;
+    }
     header img{
         width: 20vh;
         height: auto;
@@ -1367,13 +1370,18 @@ footer img{
 
     section1 {
         padding-top: 25vh ;
-        height: 120vh;
+        height: 110vh;
 
+    }
+
+    .section1div button{
+        margin-top: 80px;
     }
 
     section1 .features{
         width: 90%;
         height: auto;
+        margin-top: 100px;
     }
 
     section1 .feature4{
