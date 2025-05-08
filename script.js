@@ -1,11 +1,11 @@
-// window.addEventListener('load', () => {
-//     setTimeout(() => {
-//         window.scrollTo({
-//             top: 0,
-//             behavior: 'smooth'
-//         });
-//     }, 50); // slight delay to allow layout to settle
-// });
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }, 50); // slight delay to allow layout to settle
+});
 
 
 // Carousel section
